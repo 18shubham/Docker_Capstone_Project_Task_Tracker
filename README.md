@@ -40,10 +40,22 @@ The stack uses Docker's internal DNS. The Backend connects to the database using
 * Docker installed (20.10+)
 * Docker Compose installed
 
-### Deployment
+  ### Deployment
 Clone the repository and run:
 ```bash
 docker-compose up --build -d
 
-<img width="1224" height="496" alt="image" src="https://github.com/user-attachments/assets/98e8fb92-afe4-44b0-b66f-60b3ccb8aefd" />
+<img width="585" height="259" alt="image" src="https://github.com/user-attachments/assets/4bfff250-ab94-43a9-a0d1-dc8760c0a7ee" />
+
+  
+
+
+
+
+
+
+
+
+
+
 
