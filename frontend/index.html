@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Task Tracker</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #f4f4f4; }
+        #container { background: white; width: 300px; margin: 50px auto; padding: 20px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Task Tracker</h2>
+        <input type="text" id="taskInput" placeholder="New Task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        const API = 'http://localhost:5000/tasks'; // In 2026, we access backend via mapped host port
+
+        async function loadTasks() {
+            const res = await fetch(API);
+            const tasks = await res.json();
+            const list = document.getElementById('taskList');
+            list.innerHTML = tasks.map(t => `<li>${t.title}</li>`).join('');
+        }
+
+        async function addTask() {
+            const input = document.getElementById('taskInput');
+            await fetch(API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title: input.value })
+            });
+            input.value = '';
+            loadTasks();
+        }
+        loadTasks();
+    </script>
+</body>
+</html>
