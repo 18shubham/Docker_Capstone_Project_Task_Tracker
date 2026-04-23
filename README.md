@@ -2,6 +2,9 @@
 
 This repository contains a fully containerized **MERN-style** task management application. The project demonstrates advanced **Docker & Docker Compose** concepts, focusing on network isolation, data persistence, and automated infrastructure.
 
+<img width="585" height="259" alt="image" src="https://github.com/user-attachments/assets/1443e909-c8cf-4410-bfc6-1ee019565e26" />
+
+
 ## 🏗 System Architecture
 
 The application is architected into three distinct tiers to ensure security and scalability:
@@ -45,7 +48,6 @@ Clone the repository and run:
 ```bash
 docker-compose up --build -d
 
-<img width="585" height="259" alt="image" src="https://github.com/user-attachments/assets/4bfff250-ab94-43a9-a0d1-dc8760c0a7ee" />
 
   
 
